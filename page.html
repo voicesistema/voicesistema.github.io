@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <?!= include("page-css"); ?>    
+  </head>
+  <body>
+    
+    <div class ="container">     
+    
+    <h2 class ="center">Voikllars WebPage</h2>
+
+     <div class = "row">
+       <div class="input-field col s12">
+        <input id="cardNumber" type="number" class="validate">
+        <label for="cardNumber">Card Number</label>
+       </div>
+     </div> <!-- CLOSE ROW-->
+     
+     <div class = "center-align row">
+      <button id = searchButton class="btn waves-effect waves-light blue lighten-1" type="submit" name="action">SEARCH
+       <i class="material-icons right">search</i>
+      </button>
+     </div> <!-- CLOSE ROW-->
+     
+      <div class="row">
+        <div class="input-field col s12">
+          <input disabled id="voikllars" type="text" class="validate">
+          <label for="Current amout of Voikllars">Current amout of Voikllars</label>
+        </div>
+      </div>
+      
+      <div class = "center-align row">
+       <button id = "refreshButton" class="btn-floating btn-large waves-effect waves-light blue lighten-1"><i class="material-icons">refresh</i></button>
+      </div> <!-- CLOSE ROW-->
+
+   </div> <!-- CLOSE CONTAINER-->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <?!= include("page-js"); ?>    
+  </body>
+</html>

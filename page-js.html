@@ -1,0 +1,33 @@
+<script>
+    
+    document.getElementById("searchButton").addEventListener("click",search);
+    document.getElementById("refreshButton").addEventListener("click",refresh);
+
+    
+    function search(){
+      var DisplayVoikllars = document.getElementById("voikllars");
+      var cardNumber = document.getElementById("cardNumber").value;
+      
+      google.script.run.withSuccessHandler(updateCurrentAmount).getVoikllarsAmount(cardNumber); 
+
+    }
+    
+    function refresh(){
+    
+      var cardNumber = document.getElementById("cardNumber");
+      var DisplayVoikllars = document.getElementById("voikllars");
+      DisplayVoikllars.value = ""; 
+      cardNumber.value = "";
+      M.updateTextFields();
+
+    }
+
+    function updateCurrentAmount(currentAmount){
+      var DisplayVoikllars = document.getElementById("voikllars");
+      DisplayVoikllars.value = ("V$ "+currentAmount+",00");  
+      DisplayVoikllars.style.color = "DarkBlue"; 
+      M.updateTextFields();
+    
+    }
+
+    </script>
